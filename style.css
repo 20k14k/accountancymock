@@ -1,0 +1,741 @@
+/* CSS Reset */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Responsiveness CSS */
+@media (max-width: 1400px){
+    html {
+    font-size: 25px;
+  }
+}
+  @media (max-width: 768px){
+    html {
+    font-size: 18px;
+  }
+}
+  @media (max-width: 450px){
+    html {
+    font-size: 12px;
+  }
+}
+
+
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    background-color: var(--lightbg);
+}
+/* body::-webkit-scrollbar{
+    display: none;
+} */
+/* created variables */
+:root{
+    --lightbg: #e7e9eb;
+    --darkbg: #282A35;
+    --selectedbg: #04AA6D;
+    --lightpink: #FFC0C7;
+    --lightcyanbg: #96D4D4;
+    --navfontsize: 18px;
+    --navheight: 44.5px;
+    --pfontsize: 15px;
+    --headingsize: 42px;
+    --headingweight: 400;
+    --buttonsize: 18px;
+}
+
+/* CSS for upper navigation bar */
+/* heading CSS */
+
+/* @media (min-width: 1008px) and (max-width: 10080px){ */
+.header{
+    padding-top: 5px;
+    padding-bottom: 7px;
+    width: 100vw !important;
+    background-color: var(--lightcyanbg);
+    box-shadow: 0px 0px 5px;
+}
+/* scrolling nav CSS */
+.scrolltext{
+    text-align: center;
+    font-weight: bolder;
+    width: 95%;
+    padding: 8px 20px;
+    margin: 0px auto;
+    background-color: var(--darkbg);
+    color: white;
+    font-size: var(--navfontsize);
+    border: solid 1px white;
+    border-radius: 50px;
+}
+
+/* CSS for lower navigation bar */
+.navbar{
+    background-color: var(--lightcyanbg);
+    margin: 10px 8px;
+    display: flex;
+    align-items: center;
+}
+#navbuttonsleft{
+    width: 80%;
+}
+
+.navlogo{
+    width: 6%;
+    text-align: center;
+}
+.navlogo img{
+    width: 70px;
+    /* border: black 2px solid; */
+    border-radius: 50px;
+    animation: logoimg 1s 0ms ease infinite;
+}
+@keyframes logoimg{
+    0%{
+        border: red solid 3px;
+    }
+    25%{
+        border: hotpink solid 3px;
+    }
+    50%{
+        border:  black solid 3px;
+    }
+    75%{
+        border: white solid 3px;
+    }
+
+    100%{
+        border: red solid 3px;
+    }
+}
+
+
+/* CSS for navigation buttons */
+.navbuttons{
+    display: flex;
+}
+#navbuttonsright .right{
+    display: flex;
+    justify-content: center;
+}
+.navbuttons ul.left, .navbuttons ul.right{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: var(--navheight);
+}
+.navbuttons ul.left li, .navbuttons ul.right li{
+    list-style-type: none;
+}
+.navbuttons ul.left li a, .navbuttons ul.right li a{
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--navfontsize);
+    font-weight: 500;
+    padding: 2px 8px;
+    margin: 0px 5px;
+    border: solid 2px black;
+    border-radius: 80px;
+    color: black;
+    background-color: whitesmoke;
+    transition: all 0.5s ease-in-out;
+}
+.navbuttons ul.left li a:hover, .navbuttons ul.right li a:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/*CSS for Main body */
+main{
+    display: grid;
+    grid-template-columns: 205px auto 205px;
+    margin: 5px auto;
+    padding: 10px 15px;
+}
+
+
+/* CSS for left side content */
+.leftcontainer{
+    position: sticky;
+    top: 0;
+    left: 0px;
+    width: 185px;
+    height: 600px;
+    overflow: scroll;
+    float: left;
+    background-color: whitesmoke;
+    margin: 0px -10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px 5px;
+    box-shadow: 0px 0px 5px blue;
+}
+.leftcontainer::-webkit-scrollbar{
+    display: none;
+}
+
+.leftcontainer h3{
+    font-size: 20px;
+    width: 99%;
+    padding: 3px 5px;
+    margin: 5px 1px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(95, 94, 94);
+    color: whitesmoke;
+    font-weight: 700;
+    text-align: center;
+}
+.tests> h3{
+    margin-top: 20px;
+}
+.leftcontainer ul li{
+    list-style: none;
+    background-color: gainsboro;
+    width: 100%;
+    margin: 5px 0px;
+    padding: 3px 4px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-bottom: solid black 1px;
+    cursor: pointer;
+}
+.leftcontainer ul li a{
+    text-decoration: none;
+    padding: 2px 3px;
+    font-weight: 600;
+    color: black;
+}
+
+.leftcontainer ul li:active{
+    background-color: var(--selectedbg);
+}
+.leftcontainer ul li:hover{
+    background-color: var(--selectedbg);
+}
+
+
+/* CSS for Middle part important */
+.midcontainer{
+    display: grid;
+    grid-template-areas: 'heading heading heading heading heading'
+                         'progress progress progress progress progress'
+                         'middlebox middlebox middlebox middlebox middlebox';
+    height: fit-content;
+    width: 100%;
+    padding: 10px 5px;
+    /* border: solid 1px black; */
+    
+    margin: 0px auto;
+    margin-left: -9px;
+}
+
+.mainheading{
+    grid-area: heading;
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    margin: 5px auto;
+    text-align: center;
+    color: #156e99;
+    padding: 5px 2px;
+    padding-top: 0px;
+    border-bottom: solid 2px black;
+}
+.mainheading h3{
+    text-decoration: underline;
+    color: black;
+}
+
+.progressbar{
+    display: flex;
+    width: 100%;
+    margin: 15px auto;
+    margin-bottom: 20px;
+    text-align: center;
+    grid-area: progress;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #282A35 solid 2px;
+}
+.topic,.time,.quescount{
+    display: flex;
+    color: red;
+    background-color: antiquewhite;
+    font-size: 21px;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px gray;
+    border-radius: 5px;
+    width: 33%;
+    height: fit-content;
+    margin: 2px auto;
+    padding: 8px 3px;
+}
+
+
+/* middle main box CSS */
+
+.middlebox{
+    grid-area: middlebox;
+    display: flex;
+    width: 100%;
+}
+.midleft{
+    padding: 10px 10px;
+    display: block;
+    width: 100%;
+    border: solid 1px grey;
+    box-shadow: 0px 0px 5px blue;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.midleft h5, h6{
+    font-size: var(--navfontsize);
+}
+
+/* text Questions and question related all CSS */
+.questionboxmain{
+    width: 100%;
+    border: black solid 1px;
+    border-radius: 5px;
+    box-shadow: inset black 0px 0px 2px;
+    background-color: #b7def22a;
+    margin: 15px auto;
+    padding: 9px 8px;
+    color: black;
+}
+.questionboxmain p{
+    font-size: large;
+}
+.questionboxmain p:nth-child(1){
+    font-size: larger;
+    color: red;
+}
+label.options{
+    display: block;
+    width: 80%;
+    padding: 6px 5px;
+    font-size: 17px;
+    margin: 12px 3px;
+    border: grey 1px solid;
+    background-color:aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+span.option{
+    cursor: pointer;
+}
+
+input.options:checked +label{
+    background-color: #04AA6D;
+}
+input.options{
+    display: none;
+}
+.optionno{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 15px;
+    text-align: center;
+    font-weight: bolder;
+    border: solid 1px black;
+    border-radius: 4px;
+    background-color: snow;
+}
+
+
+/* test submit button */
+.quessubmit .button{
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 5px 8px;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: skyblue;
+    color: blue;
+    border: solid white 2px;
+    border-radius: 8px;
+}
+.quessubmit .button:hover{
+    cursor: pointer;
+    box-shadow: black 0px 0px 5px ;
+}
+
+/* Navigation Box of Questions CSS */
+.midright{
+    max-width: 28%;
+    min-width: 28%;
+}
+.quesnav{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 25px 1px;
+    margin: 0px;
+    margin-left: 5px;
+    border: 2px grey solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px blue;
+}
+.quesnav h3{
+    font-size: 20px;
+    text-align: center;
+    color: slateblue
+}
+.indicator, .answered, .unanswered{
+    display: flex;
+    margin: 15px 0px;
+}
+.indicator{
+    flex-direction: column;
+}
+.answered, .unanswered{
+    margin: 13px 10px;
+}
+.green{
+    height: 22px;
+    width: 22px;
+    border: solid 1px black;
+    border-radius: 4px;
+    background-color: #04aa6dc8;
+}
+.white{
+    height: 22px;
+    width: 22px;
+    border: solid 1px black;
+    border-radius: 4px;
+    background-color: snow;
+}
+.squarebox{
+    display: flex;
+    flex-wrap: wrap
+}
+.bigsquare{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 4px;
+    background-color: snow;
+    margin: 22px 10px;
+}
+.quesnav input.button{
+    display: block;
+    width: 90px;
+    padding: 3px 5px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 2px auto;
+    background-color: #04AA6D;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px blue;
+}
+/* CSS for right side content */
+
+.rightcontainer{
+    width: 205px;
+    margin: 0px 12px;
+}
+.rightquerybox{
+    grid-area: right;
+    width: 200px;
+    background-color: whitesmoke;
+    margin: 0px 3px;
+    /* margin-right: 10px; */
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px 8px;
+    box-shadow: 0px 0px 5px blue;
+}
+.rightquerybox h4{
+    font-size: 17px;
+    font-weight: 600;
+    width: 99%;
+    padding: 3px 5px;
+    margin: 5px 1px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(95, 94, 94);
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* query form CSS */
+
+.rightquerybox fieldset{
+    width: 180px;
+    margin: 8px auto;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+}
+.rightquerybox fieldset input,select{
+    font-size: 14px;
+    width: 178px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 2px;
+    border: solid 1px black;
+    background-color: #7a818345;
+    border-radius: 4px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+.rightquerybox fieldset textarea{
+    max-width: 178px;
+    min-width: 178px;
+    max-height: 150px;
+    min-height: 150px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 2px;
+    border: solid 1px black;
+    background-color: #7a818345;
+    border-radius: 4px;
+}
+fieldset.submit{
+    width: fit-content;
+    margin: 3px auto;
+}
+.rightquerybox fieldset button[type=submit]{
+    font-size: 18px;
+    width: fit-content;
+    padding: 2px 3px;
+    text-align: center;
+    border: 2px solid black;
+    box-shadow: black -2px 2px 5px,inset black 0px 0px 2px ;
+    border-radius: 8px;
+    background-color: rgb(92, 105, 117);
+    color: white;
+    transition: all 0.8s ease ;
+}
+.rightquerybox fieldset button[type=submit]:hover{
+    color: rgb(92, 105, 117);
+    background-color: white;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+
+/* Aside box CSS */
+.advertisementbox{
+    grid-area: right;
+    position: sticky;
+    top: 0;
+    right: 2px;
+    width: 200px;
+    background-color: whitesmoke;
+    margin: 30px 3px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px 8px;
+    box-shadow: 0px 0px 5px blue;
+}
+.advertisementbox h6{
+    text-decoration: underline;
+    font-size: 17px;
+    width: 99%;
+    padding: 3px 5px;
+    margin: 5px 1px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: navy;
+    text-align: center;
+    animation: sponser 2s 0ms ease infinite;
+}
+@keyframes sponser{
+    0%{
+        color: red;
+    }
+    25%{
+        color: green;
+    }
+    50%{
+        color:  skyblue;
+    }
+    75%{
+        color: navy;
+    }
+
+    100%{
+        color: red;
+    }
+}
+.advertisementbox img{
+    width: 180px;
+    border: solid 3px black;
+    animation: imgborderradius 1s 0ms infinite;
+}
+@keyframes imgborderradius{
+    0%{
+        border-radius: 0px;
+    }
+    25%{
+        border-radius: 10px;
+    }
+    50%{
+        border-radius: 20px;
+    }
+    75%{
+        border-radius: 30px;
+    }
+
+    100%{
+        border-radius: 10px;
+    }
+}
+
+
+/* footer css */
+footer{
+    display: grid;
+    grid-template-areas: 'upper'
+                        'down';
+    background-color: #363636;
+    border: solid grey 2px;
+}
+.upper{
+    grid-area: upper;
+    display: grid;
+    grid-template-areas: 'left mid right';
+}
+.leftfooter, .midfooter, .rightfooter{
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    display: block;
+    margin: 5px auto;
+    width: 100%;
+    padding: 8px 30px;
+    padding-left: 80px;
+    text-align: justify;
+}
+.leftfooter ul li, .midfooter ul li, .rightfooter ul li{
+    list-style-type: none;
+}
+.leftfooter ul li, .midfooter ul li a, .rightfooter ul li a, .rightfooter li, .downleft{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal !important;
+    color: white;
+    line-height: 22px;
+}
+.leftfooter{
+    grid-area: left;
+}
+.midfooter{
+    grid-area: mid;
+}
+.midfooter img{
+    width: 25px;
+}
+.rightfooter{
+    grid-area: right;
+}
+.rightfooter h5{
+    animation: sponser 0.5s infinite ease-in-out;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    line-height: 20px;
+    margin-top: 7px;
+}
+.rightfooter input[type=email]{
+    padding: 2px 5px;
+    font-size: 14px;
+    border-radius: 9px;
+    border: solid 2px black;
+    height: 25px;
+    width: 200px;
+    margin: 3px auto;
+}
+.rightfooter button[type=submit]{
+    margin: 2px auto;
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 14px;
+    border: black 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color:whitesmoke;
+    box-shadow: 0px 0px 4px whitesmoke;
+}
+.down{
+    grid-area: down;
+    display: flex;
+    margin: 3px;
+    padding: 3px 30px;
+}
+.downleft, .downright{
+    display: block;
+    width: 100%;
+}
+.downright{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.downright img{
+    width: 40px;
+    margin: 0px 20px;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+/* chat with us CSS */
+.chatwithus img{
+    width: 75px;
+    border-radius: 50px;
+}
+.chatwithus{
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    border: 2px black solid;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px black;
+}
+
+
+
+/* responsiveness CSS */
+/* Small (smaller than 640px) Medium (641px to 1007px) Large (1008px and larger) */
+
+/* medium screen responsiveness (641px to 1007px) */
+@media (max-width: 700px){
+    .navbuttons{
+        display: none;
+    }
+    .navlogo{
+        width: 6%;
+        text-align: center;
+        margin: 0px auto;
+    }
+    .rightcontainer{
+        display: none;
+    }
+    .leftcontainer{
+        display:none;
+    }
+    main{
+        display: block;
+        border: solid 1px black;
+    }
+    .leftfooter, .midfooter, .rightfooter{
+        margin: 3px auto;
+        padding: 3px 10px;
+    }
+}

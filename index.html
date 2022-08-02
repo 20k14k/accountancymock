@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Quize</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+    <header>
+        <div class="header">
+            <div class="scrolltext">
+                <marquee behavior="scroll-left" direction="left">Hello Welcome to My Website !!!. Here you will find MCQs Questions and Practices Quizzes for CBSE class XII for all Subjects.</marquee>
+            </div>
+            <div class="navbar">
+                <div class="navlogo">
+                    <img src="https://lh3.googleusercontent.com/uMPR6aZtxnt56N0kMbKDJTjWLWljA1IIzK4kZbVmZZGy2gm2pjJ0DQijlII8wGonTXOv6eXfRV2Q1MYVKb-Qa0QK4YCK-z11kA_Zk5FKucCU2s7lt8YTOEEqe5aSre-oGMXYVyADiDc=w2400" alt="karan">
+                </div>
+                <div class="navbuttons" id="navbuttonsleft">
+                    <ul class="left">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Class XII</a></li>
+                        <li><a href="#">Class X</a></li>
+                        <li><a href="#">MCQs Questions</a></li>
+                        <li><a href="#">Practice Questions</a></li>
+                        <li><a href="#">CUET Mock Test</a></li>
+                        <li><a href="#">CUET Mock Test</a></li>
+                        <li><a href="#">CUET Mock Test</a></li>
+                        <li><a href="#">CUET Mock Test</a></li>
+                        <li><a href="#">CUET Mock Test</a></li>
+                        <li><a href="#">CUET Mock Test</a></li>
+                        <li><a href="#">CUET Mock Test</a></li>
+                    </ul>
+                </div>
+                <div class="navbuttons" id="navbuttonsright">
+                        <ul class="right">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">SignUp</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="leftcontainer">
+            <div class="subjects">
+                <h3>Subjects</h3>
+                <ul>
+                    <li><a href="#">Accountancy</a></li>
+                    <li><a href="#">Business Studies</a></li>
+                    <li><a href="#">Economics</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Hindi</a></li>
+                    <li><a href="#">Mathematics</a></li>
+                    <li><a href="#">Political Science</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Geography</a></li>
+                </ul>
+            </div>
+            <div class="tests">
+                <h3>MCQs Tests</h3>
+                <ul>
+                    <li><a href="#">Test 1</a></li>
+                    <li><a href="#">Test 2</a></li>
+                    <li><a href="#">Test 3</a></li>
+                    <li><a href="#">Test 4</a></li>
+                    <li><a href="#">Test 5</a></li>
+                    <li><a href="#">Test 6</a></li>
+                    <li><a href="#">Test 7</a></li>
+                    <li><a href="#">Test 8</a></li>
+                    <li><a href="#">Test 9</a></li>
+                    <li><a href="#">Test 10</a></li>
+                    <li><a href="#">Test 11</a></li>
+                    <li><a href="#">Test 12</a></li>
+                    <li><a href="#">Test 13</a></li>
+                    <li><a href="#">Test 14</a></li>
+                    <li><a href="#">Test 15</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="midcontainer">
+            <div class="mainheading">
+                <h1>Accountancy Class XII <br> CBSE Board</h1>
+                <h3>MCQs Practice Questions</h3>
+            </div>
+            <div class="progressbar">
+                <div class="topic">Fundamentals of partnership</div>
+                <div class="time">
+                    <div>Time Left :-</div>
+                    <div id="ten-countdown"></div>
+                    <script>
+                        function countdown( elementName, minutes, seconds )
+                            {
+                            var element, endTime, hours, mins, msLeft, time;
+
+                        function twoDigits( n )
+                        {
+                        return (n <= 9 ? "0" + n : n);
+                        }
+
+                        function updateTimer()
+                        {
+                            msLeft = endTime - (+new Date);
+                            if ( msLeft < 1000 ) {
+                        element.innerHTML = "Time is up!";
+                            } else {
+                        time = new Date( msLeft );
+                        hours = time.getUTCHours();
+                        mins = time.getUTCMinutes();
+                        element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+                        setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+                         }
+                         }
+
+                        element = document.getElementById( elementName );
+                        endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+                        updateTimer();}
+                        countdown( "ten-countdown", 10, 0 );
+                    </script>
+                </div>
+                <div class="quescount">Total Question -10</div>
+            </div>
+            <div class="middlebox">
+                <div class="midleft">
+                    <h5>Fundametals of Partnership Firm</h5>
+                    <h6>MCQs Questions</h6>
+                    <form action="#" id="submit" class="quiz" name="quiz">
+                        <div class="questionboxmain">
+                            <p>Question 1.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="1A" name="options1" class="options" value="A">
+                            <label class="options" for="1A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="1B" name="options1" class="options" value="B">
+                            <label class="options" for="1B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="1C" name="options1" class="options" value="C">
+                            <label class="options" for="1C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="1D" name="options1" class="options" value="D">
+                            <label class="options" for="1D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 2.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="2A" name="options2" class="options" value="A">
+                            <label class="options" for="2A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="2B" name="options2" class="options" value="B">
+                            <label class="options" for="2B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="2C" name="options2" class="options" value="C">
+                            <label class="options" for="2C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="2D" name="options2" class="options" value="D">
+                            <label class="options" for="2D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 3.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="3A" name="options3" class="options" value="A">
+                            <label class="options" for="3A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="3B" name="options3" class="options" value="B">
+                            <label class="options" for="3B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="3C" name="options3" class="options" value="C">
+                            <label class="options" for="3C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="3D" name="options3" class="options" value="D">
+                            <label class="options" for="3D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 4.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="4A" name="options4" class="options" value="A">
+                            <label class="options" for="4A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="4B" name="options4" class="options" value="B">
+                            <label class="options" for="4B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="4C" name="options4" class="options" value="C">
+                            <label class="options" for="4C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="4D" name="options4" class="options" value="D">
+                            <label class="options" for="4D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 5.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="5A" name="options5" class="options" value="A">
+                            <label class="options" for="5A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="5B" name="options5" class="options" value="B">
+                            <label class="options" for="5B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="5C" name="options5" class="options" value="C">
+                            <label class="options" for="5C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="5D" name="options5" class="options" value="D">
+                            <label class="options" for="5D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 6.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="6A" name="options6" class="options" value="A">
+                            <label class="options" for="6A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="6B" name="options6" class="options" value="B">
+                            <label class="options" for="6B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="6C" name="options6" class="options" value="C">
+                            <label class="options" for="6C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="6D" name="options6" class="options" value="D">
+                            <label class="options" for="6D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 7.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="7A" name="options7" class="options" value="A">
+                            <label class="options" for="7A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="7B" name="options7" class="options" value="B">
+                            <label class="options" for="7B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="7C" name="options7" class="options" value="C">
+                            <label class="options" for="7C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="7D" name="options7" class="options" value="D">
+                            <label class="options" for="7D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 8.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="8A" name="options8" class="options" value="A">
+                            <label class="options" for="8A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="8B" name="options8" class="options" value="B">
+                            <label class="options" for="8B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="8C" name="options8" class="options" value="C">
+                            <label class="options" for="8C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="8D" name="options8" class="options" value="D">
+                            <label class="options" for="8D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 9.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="9A" name="options9" class="options" value="A">
+                            <label class="options" for="9A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="9B" name="options9" class="options" value="B">
+                            <label class="options" for="9B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="9C" name="options9" class="options" value="C">
+                            <label class="options" for="9C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="9D" name="options9" class="options" value="D">
+                            <label class="options" for="9D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="questionboxmain">
+                            <p>Question 10.</p>
+                            <p>When the business is taken over by another business, the excess of purchase consideration over its net value asset is referred to as _____________.</p>
+                            <input type="radio" id="10A" name="options10" class="options" value="A">
+                            <label class="options" for="10A">
+                                <span class="optionno">A</span><span class="option">Purchase Goodwill</span>
+                            </label>
+                            <input type="radio" id="10B" name="options10" class="options" value="B">
+                            <label class="options" for="10B">
+                                <span class="optionno">B</span><span class="option">Self Generated Goodwill</span>
+                            </label>
+                            <input type="radio" id="10C" name="options10" class="options" value="C">
+                            <label class="options" for="10C">
+                                <span class="optionno">C</span><span class="option">Super Profits Goodwill</span>
+                            </label>
+                            <input type="radio" id="10D" name="options10" class="options" value="D">
+                            <label class="options" for="10D">
+                                <span class="optionno">D</span><span class="option">Capitalised Goodwill</span>
+                            </label>
+                        </div>
+                        <div class="quessubmit">
+                        <input type="submit" class="button" id="submittest" name="submitquiz" placeholder="SUBMIT TEST">
+                        </div>
+                    </form>
+                </div>
+                <div class="midright">
+                    <div class="quesnav">
+                        <h3>Question Navigator</h3>
+                        <div class="indicator">
+                            <div class="answered">
+                                <div class="green"></div>
+                                <div>Answerd</div>
+                            </div>
+                            <div class="unanswered">
+                                <div class="white"></div>
+                                <div>Unanswered</div>
+                            </div>
+                        </div>
+                        <div class="squarebox">
+                            <div class="bigsquare" id="ques1">1</div>
+                            <div class="bigsquare" id="ques2">2</div>
+                            <div class="bigsquare" id="ques3">3</div><br>
+                            <div class="bigsquare" id="ques4">4</div>
+                            <div class="bigsquare" id="ques5">5</div>
+                            <div class="bigsquare" id="ques6">6</div><br>
+                            <div class="bigsquare" id="ques7">7</div>
+                            <div class="bigsquare" id="ques8">8</div>
+                            <div class="bigsquare" id="ques9">9</div><br>
+                            <div class="bigsquare" id="ques10">10</div>
+                        </div>
+                        <form action="#" id="submit" class="quiz" name="quiz">
+                            <input type="submit" class="button" id="submittest" name="submitquiz">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightcontainer">
+            <div class="rightquerybox">
+                <h4>Ask Your Doubt Here</h4>
+                <form action="">
+                    <fieldset class="questionbox">
+                        Your Name:<br>
+                        <input type="text" placeholder="Your Name" required>
+                    </fieldset>
+                    <fieldset class="questionbox">
+                        Mobile No.:<br>
+                        <input type="Number" placeholder="1234567890" required>
+                    </fieldset>
+                    <fieldset class="questionbox">
+                        Email:<br>
+                        <input type="email" placeholder="xyz123@gmail.com" required>
+                    </fieldset>
+                    <fieldset class="questionbox">
+                        BOARD of Examination<br>
+                        <select name="board" id="board" required>
+                            <option value="">--Select Board--</option>
+                            <option value="CBSE">CBSE BOARD</option>
+                            <option value="ICSE">ICSE BOARD</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="questionbox">
+                        Your Question:<br>
+                        <textarea name="question" id="question" placeholder="write here your question...." required></textarea>
+                    </fieldset>
+                    <fieldset class="submit">
+                        <button type="submit">Get Answers</button>
+                    </fieldset>
+                </form>
+            </div>
+            <aside class="advertisementbox">
+                <h6>Sponsers</h6>
+                <img src="https://lh3.googleusercontent.com/AsAGpYP1dSI0m-Z2Mi7thyekOXJ7XtLZxG2CsnZdE3WN9QZoMIZQfoYkhlDuHCls5B64zRVIWN9r1FZMnQ1WeqyxkslHxB3qgK3tranR0ZerxE3I2GLtU0Nsm2BTz7ktnsobIa43Clo=w2400" alt="education for all 'logo'">
+                <p>Education for All is a coaching center which has been started   to help financially weak children in studies. This is also a campaign through which we try to give the best education to the economically weaker children who are not able to pay more fees. The sole purpose of Education for All is that the child who is a little weak financially, this lack of it should not affect his studies. That's why we say better education in less fees.</p>
+            </aside>
+        </div>
+    </main>
+    <div class="chatwithus">
+        <img src="https://st.depositphotos.com/1008768/4671/i/600/depositphotos_46719647-stock-photo-live-chat.jpg" alt="">
+    </div>
+    <footer>
+        <div class="upper">
+            <div class="leftfooter">
+                <h4>Books Used in Making these Questions</h4>
+                <ul>
+                    <li>RS. Agarwal</li>
+                    <li>VK Ohari</li>
+                    <li>TR Jain</li>
+                    <li>Sandeep Garg</li>
+                    <li>NCERT</li>
+                    <li>DOE Publication</li>
+                    <li>Kiran Publication</li>
+                    <li>DK Goel</li>
+                    <li>#accounts1</li>
+                    <li>#accounts2</li>
+                </ul>
+            </div>
+            <div class="midfooter">
+                <h4>Follow for More</h4>
+                <ul>
+                    <li><a href="#"><img src="https://www.svgrepo.com/show/165266/whatsapp.svg" alt=""> </a></li>
+                    <li><a href="#"><img src="https://www.svgrepo.com/show/4493/phone-call.svg" alt=""> </a></li>
+                    <li><a href="#"><img src="https://www.svgrepo.com/show/157839/youtube.svg" alt=""> </a></li>
+                    <li><a href="#"><img src="https://www.svgrepo.com/show/13643/facebook.svg" alt=""> </a></li>
+                    <li><a href="#"><img src="https://www.svgrepo.com/show/111199/instagram.svg" alt=""> </a></li>
+                    <li><a href="#"><img src="https://www.svgrepo.com/show/20626/twitter.svg" alt=""> </a></li>
+                </ul>
+            </div>
+            <div class="rightfooter">
+                <h4>Customer Care</h4>
+                <ul>
+                    <h5>Subscribe for Latest Notifications</h5>
+                    <li>
+                        <form action="#">
+                            <input type="email" name="subscription" class="subscription" id="subs" placeholder="Your Email" required><br>
+                            <button type="submit" class="subscription">SUBSCRIBE</button>
+                        </form>
+                    </li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Change Login Details</a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+                </ul>
+            </div>
+            </div>
+        <div class="down">
+            <div class="downleft">
+                &copy; 2022 || All Rights Reserved || Do Not Make Copy [Punishable]
+            </div>
+            <div class="downright">
+                <a href="#"><img src="https://images.asos-media.com/navigation/visa-png" alt="#"></a>
+                <a href="#"><img src="https://images.asos-media.com/navigation/mastercard-png" alt="#"></a>
+                <a href="#"><img src="https://images.asos-media.com/navigation/pay-pal-png" alt="#"></a>
+                <a href="#"><img src="https://images.asos-media.com/navigation/apple-pay-png" alt="#"></a>
+                <a href="#"><img src="https://images.asos-media.com/navigation/afterpay_new-png" alt="#"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
